@@ -13,35 +13,15 @@ function handleKey(event) {
     $car.className = 'car rotate-right';
   }
 }
-
-// function handleStart(event) {
-//   var posLeft = 0;
-//   setInterval(frame, 5);
-
-//   function frame() {
-//     if (event.key === ' ') {
-//       posLeft++;
-//     }
-//     if (posLeft === 1300) {
-//       while (posLeft > 0) {
-//         posLeft--;
-//       }
-//     }
-//     $car.style.left = posLeft + 'px';
-//   }
-// }
-
 function handleStart(event) {
   $car.style.left = '0px';
   setInterval(moveRight, 16);
   function moveRight() {
+    if (event.key !== ' ') {
+      return;
+    }
     if (event.key === ' ') {
       $car.style.left = parseInt($car.style.left) + 15 + 'px';
-    }
-    if ($car.style.left === '1300px') {
-      while ($car.style.left > 0) {
-        $car.style.left--;
-      }
     }
   }
 }
