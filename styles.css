@@ -7,8 +7,12 @@ body {
 }
 
 .car {
-  width: 5%;
-  position: relative;
+  width: 15%;
+  position: absolute;
+}
+
+.left {
+  left: 16 + px;
 }
 
 .rotate-down {
