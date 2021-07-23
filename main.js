@@ -13,13 +13,10 @@ function handleKey(event) {
     $car.className = 'car rotate-right';
   }
   $car.style.left = '0px';
-  setInterval(moveRight, 16);
+  if (event.key === ' ') {
+    setInterval(moveRight, 16);
+  }
   function moveRight() {
-    if (event.key !== ' ') {
-      return;
-    }
-    if (event.key === ' ') {
-      $car.style.left = parseInt($car.style.left) + 15 + 'px';
-    }
+    $car.style.left = parseInt($car.style.left) + 15 + 'px';
   }
 }
