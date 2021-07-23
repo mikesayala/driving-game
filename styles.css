@@ -4,11 +4,16 @@
 
 body {
   background-color: rgb(11, 160, 11);
+  width: 80%;
 }
 
 .car {
-  width: 5%;
-  position: relative;
+  width: 15%;
+  position: absolute;
+}
+
+.left {
+  left: 16 + px;
 }
 
 .rotate-down {

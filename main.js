@@ -10,6 +10,13 @@ function handleKey(event) {
   } else if (event.key === 'ArrowUp') {
     $car.className = 'car rotate-up';
   } else {
-    $car.className = 'car rotate-right)';
+    $car.className = 'car rotate-right';
+  }
+  $car.style.left = '0px';
+  if (event.key === ' ') {
+    setInterval(moveRight, 16);
+  }
+  function moveRight() {
+    $car.style.left = parseInt($car.style.left) + 15 + 'px';
   }
 }
