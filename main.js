@@ -1,7 +1,7 @@
 var $car = document.querySelector('.car');
 
 document.addEventListener('keydown', handleKey);
-document.addEventListener('keydown', handleStart);
+
 function handleKey(event) {
   if (event.key === 'ArrowDown') {
     $car.className = 'car rotate-down';
@@ -12,8 +12,6 @@ function handleKey(event) {
   } else {
     $car.className = 'car rotate-right';
   }
-}
-function handleStart(event) {
   $car.style.left = '0px';
   setInterval(moveRight, 16);
   function moveRight() {
